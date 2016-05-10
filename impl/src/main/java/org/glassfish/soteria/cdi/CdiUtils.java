@@ -91,7 +91,7 @@ public class CdiUtils {
     
     public static void addAnnotatedTypes(BeforeBeanDiscovery beforeBean, BeanManager beanManager, Class<?>... types) {
         for (Class<?> type : types) {
-            beforeBean.addAnnotatedType(beanManager.createAnnotatedType(type), null);
+            beforeBean.addAnnotatedType(beanManager.createAnnotatedType(type),  "soteria" + type.getName() );
         }
     }
     
